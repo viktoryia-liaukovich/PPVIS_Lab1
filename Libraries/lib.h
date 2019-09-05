@@ -4,6 +4,7 @@ using namespace std;
 // functions
 
 void drawRectangle();
+void renderRectangle();
 
 // classes
 
