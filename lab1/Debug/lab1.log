@@ -1,5 +1,4 @@
 ﻿  main.cpp
   source.cpp
-  test.cpp
   Создание кода...
-sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: тип компьютера модуля "x64" противоречит типу целевого компьютера "x86"
+  lab1.vcxproj -> C:\Users\Вика Венцкуте\Desktop\Университет\Второй курс\ППВИС\PPVIS_Lab1\Debug\lab1.exe
