@@ -1,8 +1,5 @@
 ﻿  main.cpp
   source.cpp
-c:\users\вика венцкуте\desktop\ппвис\ppvis_lab1\libraries\graphics.h(302): error C2086: int right: переопределение
-  c:\users\вика венцкуте\desktop\ппвис\ppvis_lab1\libraries\graphics.h(302): note:  см. объявление "right"
-c:\users\вика венцкуте\desktop\ппвис\ppvis_lab1\sfml-2.5.1\include\sfml\graphics\rect.inl(81): error C2589: (: недопустимая лексема справа от "::"
-c:\users\вика венцкуте\desktop\ппвис\ppvis_lab1\sfml-2.5.1\include\sfml\graphics\rect.inl(114): error C2589: (: недопустимая лексема справа от "::"
   test.cpp
   Создание кода...
+  lab1.vcxproj -> C:\Users\Вика Венцкуте\Desktop\Университет\Второй курс\ППВИС\PPVIS_Lab1\x64\Debug\lab1.exe

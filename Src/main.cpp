@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-	cout << "Choose: ";
+	cout << "Choose:1) Type coordinates; ";
 	int n;
 	cin >> n;
 	switch (n) {

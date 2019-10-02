@@ -4,7 +4,6 @@ using namespace std;
 // functions
 
 void drawRectangle();
-void renderRectangle();
 
 // classes
 
@@ -14,10 +13,9 @@ public:
 	RectangleElement() {
 		getCoordinates();
 		calcCoordinates();
-	};
-private: 
+	}; 
 	void getCoordinates() {
-		cin >> x1, y1, x4, y4;
+		cin >> x1 >> y1 >> x4 >> y4;
 	};
 	void calcCoordinates() {
 		x2 = x4;
@@ -26,3 +24,5 @@ private:
 		y3 = y4;
 	};
 };
+
+
