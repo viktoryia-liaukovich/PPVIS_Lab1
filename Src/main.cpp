@@ -11,7 +11,7 @@ int main() {
 	switch (n) {
 	case 1: drawRectangle();
 		break;
-	case 2: //test();
+	case 2: //changeSize (x1; y1; x4; y4;)
 		break;
 	};
 	_getch();
