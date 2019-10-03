@@ -20,6 +20,12 @@ public:
 	void setDimensions();
 	void getData();
 	void changeSize();
+	void increaseY();
+	void decreaseY();
+	void sumRectangles();
+	void sumRectangleWithParent();
+	void crossRectangles();
+	void crossRectanglesIntoParent();
 	bool checkIfRectangleExists();
 private:
 	void calcCoordinates();
