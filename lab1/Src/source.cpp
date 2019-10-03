@@ -145,3 +145,12 @@ void Rectangle::sumRectangles() {
 	calcCoordinates();
 }
 
+void Rectangle::sumRectanglesWithAssignment() {
+	if (width1 > width) {
+		width = width1;
+	}
+	if (height1 > height) {
+		height = height1;
+	}
+	calcCoordinates();
+}

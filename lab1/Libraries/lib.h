@@ -27,6 +27,7 @@ public:
 	void increaseY();
 	void decreaseY();
 	void sumRectangles();
+	void sumRectanglesWithAssignment();
 	void crossRectangles();
 	void crossRectanglesWithAssignment();
 	void displacement();
