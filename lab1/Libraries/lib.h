@@ -28,7 +28,7 @@ public:
 	void sumRectangles();
 	void sumRectangleWithParent();
 	void crossRectangles();
-	void crossRectangles2();
+	void crossRectanglesWithAssignment();
 	void crossRectanglesIntoParent();
 	void displacement();
 	bool checkIfRectangleExists();

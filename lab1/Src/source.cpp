@@ -114,37 +114,25 @@ void Rectangle::crossRectangles() {
 	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
 }
 
-void Rectangle::crossRectangles2() {
-	enterTwoRectangles();
+void Rectangle::sumRectangleWithParent(){
+	setCoordinates();
+	calcCoordinates();
 
+}
+
+void Rectangle::crossRectanglesWithAssignment() {
 	int resultWidth, resultHeight;
-	int resultWidth1=width1, resultHeight1, resultWidth2, resultHeight2=height2;
-	int square1, square2;
-
-	resultWidth1 += width2;
-	if (height1 > height2) {
-		resultHeight1 = height1;
+	cout<< "Enter dimensions of new rectangle (int width, int height): ";
+	cin>> width1 >> height1;
+	while (width1 < 1 || height1 < 1) {
+		cout<< "Enter valid positive dimensions value: ";
+		cin>> width1>> height1;
 	}
-	else {
-		resultHeight1 = height2;
+	if (width1 < width) {
+		width = width1;
 	}
-	square1 = resultHeight1 * resultWidth1;
-	
-	resultHeight2 += height1;
-	if (width1 > width2) {
-		resultWidth2 = width2;
+	if (height1 < height) {
+		height = height1;
 	}
-	else {
-		resultWidth2 = width1;
-	}
-	square2 = resultHeight2 * resultWidth2;
-	if (square1 > square2) {
-		resultHeight = resultHeight1;
-		resultWidth = resultWidth1;
-	}
-	else {
-		resultHeight = resultHeight2;
-		resultWidth = resultWidth2;
-	}
-	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
+	calcCoordinates();
 }
