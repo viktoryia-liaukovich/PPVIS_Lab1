@@ -31,6 +31,7 @@ void Rectangle::calcCoordinates() {
 	y2 = y1;
 	y3 = y1 + height;
 	y4 = y3;
+	checkIfRectangleExists();
 }
 
 void Rectangle::changeSize() {
@@ -74,6 +75,10 @@ void Rectangle::displacement() {
 bool Rectangle::checkIfRectangleExists() {
 	if (width == 0) {
 		cout << "Create an instance of a rectangle first!\n\n";
+		return false;
+	}
+	if (width < 0 || x1 < 0 || y1 < 0 || height < 0) {
+		cout << "Enter valid rectangle data!\n\n";
 		return false;
 	}
 	return true;
