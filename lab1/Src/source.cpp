@@ -47,6 +47,17 @@ void Rectangle::changeSize() {
 	calcCoordinates();
 };
 
+
+void Rectangle::increaseY() {
+	height++;
+	calcCoordinates();
+}
+
+void Rectangle::decreaseY() {
+	height--;
+	calcCoordinates();
+}
+
 bool Rectangle::checkIfRectangleExists() {
 	if (width == 0) {
 		cout << "Create an instance of a rectangle first!\n\n";
