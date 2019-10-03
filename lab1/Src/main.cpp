@@ -33,6 +33,10 @@ int main() {
 			rect1.changeSize();
 			break;
 		}
+		case 4: {
+			cout << "Input new coordinates\n";
+			rect1.setCoordinates();
+		}
 		};
 	}
 	_getch();
