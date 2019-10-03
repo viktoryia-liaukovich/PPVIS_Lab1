@@ -1,4 +1,4 @@
 .vs
 
-lab1/Debug/*
-lab1/x64/*
+lab1/Debug
+lab1/x64

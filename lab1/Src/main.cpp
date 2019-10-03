@@ -10,10 +10,12 @@ int main() {
 	int menu;
 
 	while (true) {
-		cout << "Choose:\n1) Create a rectangle;\n2) Show rectangle data;\n3) Change rectangle's square size by multiplying\n";
-		cout << "4) Increase X on 1\n5) Decrease X on 1\n6) Increase Y on 1\n7) Decrease Y on 1\n";
-		cout << "8) Move rectangle (new int x1, int y1)\n9) Cross Rectangles\n10) Cross Rectangles with +=";
-		cout << "\n0) Exit\n"; cin >> menu;
+		cout << "\n=======================================================\n";
+		cout << "Choose:\n1)  Create a rectangle;\n2)  Show rectangle data;\n3)  Change rectangle's square size by multiplying\n";
+		cout << "4)  Increase X on 1\n5)  Decrease X on 1\n6)  Increase Y on 1\n7)  Decrease Y on 1\n";
+		cout << "8)  Move rectangle (new int x1, int y1)\n9)  Cross rectangles\n10) Cross rectangles with assignment\n";
+		cout << "11) Sum rectangles\n";
+		cout << "\n\n0)  Exit\n"; cin >> menu;
 		system("cls");
 		switch (menu) {
 		default: return 0;
@@ -67,7 +69,12 @@ int main() {
 			break;
 		}
 		case 10: {
+			if (!rect1.checkIfRectangleExists()) break;
 			rect1.crossRectangles2();
+			break;
+		}
+		case 11: {
+			rect1.sumRectangles();
 			break;
 		}
 		};

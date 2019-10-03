@@ -15,6 +15,7 @@ public:
 	int x4, y4;
 	int width = 0, height = 0;
 	int width1, height1, width2, height2;
+	int resultWidth, resultHeight;
 
 	Rectangle();
 	void setCoordinates();
@@ -29,7 +30,6 @@ public:
 	void sumRectangleWithParent();
 	void crossRectangles();
 	void crossRectangles2();
-	void crossRectanglesIntoParent();
 	void displacement();
 	bool checkIfRectangleExists();
 private:

@@ -148,3 +148,16 @@ void Rectangle::crossRectangles2() {
 	}
 	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
 }
+
+void Rectangle::sumRectangles() {
+	enterTwoRectangles();
+	if (width1 > width2) {
+		resultWidth = width1;
+	}
+	else resultWidth = width2;
+	if (height1 > height2) {
+		resultHeight = height1;
+	}
+	else resultHeight = height2;
+	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
+}
