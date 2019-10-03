@@ -128,6 +128,7 @@ void Rectangle::crossRectanglesWithAssignment() {
 	if (height1 < height) {
 		height = height1;
 	}
+	calcCoordinates();
 }
 
 void Rectangle::sumRectangles() {
@@ -143,3 +144,4 @@ void Rectangle::sumRectangles() {
 	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
 	calcCoordinates();
 }
+
