@@ -12,7 +12,7 @@ int main() {
 	while (true) {
 		cout << "Choose:\n1) Create a rectangle;\n2) Show rectangle data;\n3) Change rectangle's square size by multiplying\n";
 		cout << "4) Increase X on 1\n5) Decrease X on 1\n6) Increase Y on 1\n\n7) Decrease Y on 1";
-		cout << "8) ";
+		cout << "8) Move rectangle (new int x1, int y1)";
 		cout << "\n0) Exit\n"; cin >> menu;
 		system("cls");
 		switch (menu) {
@@ -36,9 +36,15 @@ int main() {
 			break;
 		}
 		case 4: {
-			cout << "Input new coordinates\n";
-			rect1.setCoordinates();
-			rect1.displacement();
+			if (!rect1.checkIfRectangleExists()) break;
+			rect1.increaseX();
+			break;
+		}
+		case 5: {
+			if (!rect1.checkIfRectangleExists()) break;
+			rect1.decreaseX();
+			break;
+		}
 		case 6: {
 			if (!rect1.checkIfRectangleExists()) break;
 			rect1.increaseY();
@@ -50,13 +56,9 @@ int main() {
 			break;
 		}
 		case 8: {
-			if (!rect1.checkIfRectangleExists()) break;
-			rect1.increaseX();
-			break;
-		}
-		case 9: {
-			if (!rect1.checkIfRectangleExists()) break;
-			rect1.decreaseX();
+			cout << "Input new coordinates\n";
+			rect1.setCoordinates();
+			rect1.displacement();
 			break;
 		}
 		};
