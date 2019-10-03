@@ -20,6 +20,8 @@ public:
 	void setDimensions();
 	void getData();
 	void changeSize();
+	void increaseX();
+	void decreaseX();
 	void increaseY();
 	void decreaseY();
 	void sumRectangles();

@@ -47,6 +47,15 @@ void Rectangle::changeSize() {
 	calcCoordinates();
 };
 
+void Rectangle::increaseX() {
+	width++;
+	calcCoordinates();
+}
+
+void Rectangle::decreaseX() {
+	width--;
+	calcCoordinates();
+}
 
 void Rectangle::increaseY() {
 	height++;
