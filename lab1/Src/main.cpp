@@ -70,7 +70,7 @@ int main() {
 		}
 		case 10: {
 			if (!rect1.checkIfRectangleExists()) break;
-			rect1.crossRectangles2();
+			rect1.crossRectanglesWithAssignment();
 			break;
 		}
 		case 11: {
