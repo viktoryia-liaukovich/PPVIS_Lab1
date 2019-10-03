@@ -58,6 +58,10 @@ void Rectangle::decreaseY() {
 	calcCoordinates();
 }
 
+void Rectangle::displacement() {
+	calcCoordinates();
+}
+
 bool Rectangle::checkIfRectangleExists() {
 	if (width == 0) {
 		cout << "Create an instance of a rectangle first!\n\n";

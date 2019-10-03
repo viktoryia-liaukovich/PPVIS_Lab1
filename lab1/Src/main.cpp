@@ -35,12 +35,10 @@ int main() {
 			rect1.changeSize();
 			break;
 		}
-<<<<<<< HEAD
 		case 4: {
 			cout << "Input new coordinates\n";
 			rect1.setCoordinates();
 			rect1.displacement();
-=======
 		case 6: {
 			if (!rect1.checkIfRectangleExists()) break;
 			rect1.increaseY();
@@ -50,10 +48,10 @@ int main() {
 			if (!rect1.checkIfRectangleExists()) break;
 			rect1.decreaseY();
 			break;
->>>>>>> ced3bafc0be87195202e365fa4de11e9f8096f47
 		}
 		};
+		}
+		_getch();
+		return 0;
 	}
-	_getch();
-	return 0;
 }
