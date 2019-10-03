@@ -146,6 +146,12 @@ void Rectangle::sumRectangles() {
 }
 
 void Rectangle::sumRectanglesWithAssignment() {
+	cout << "Enter dimensions of new rectangle (int width, int height): ";
+	cin >> width1 >> height1;
+	while (width1 < 1 || height1 < 1) {
+		cout << "Enter valid positive dimensions value: ";
+		cin >> width1 >> height1;
+	}
 	if (width1 > width) {
 		width = width1;
 	}
