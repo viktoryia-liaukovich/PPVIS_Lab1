@@ -49,6 +49,16 @@ int main() {
 			rect1.decreaseY();
 			break;
 		}
+		case 8: {
+			if (!rect1.checkIfRectangleExists()) break;
+			rect1.increaseX();
+			break;
+		}
+		case 9: {
+			if (!rect1.checkIfRectangleExists()) break;
+			rect1.decreaseX();
+			break;
+		}
 		};
 		}
 		_getch();
