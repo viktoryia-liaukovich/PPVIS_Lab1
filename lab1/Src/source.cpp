@@ -113,3 +113,38 @@ void Rectangle::crossRectangles() {
 	} else resultHeight = height2;
 	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
 }
+
+void Rectangle::crossRectangles2() {
+	enterTwoRectangles();
+
+	int resultWidth, resultHeight;
+	int resultWidth1=width1, resultHeight1, resultWidth2, resultHeight2=height2;
+	int square1, square2;
+
+	resultWidth1 += width2;
+	if (height1 > height2) {
+		resultHeight1 = height1;
+	}
+	else {
+		resultHeight1 = height2;
+	}
+	square1 = resultHeight1 * resultWidth1;
+	
+	resultHeight2 += height1;
+	if (width1 > width2) {
+		resultWidth2 = width2;
+	}
+	else {
+		resultWidth2 = width1;
+	}
+	square2 = resultHeight2 * resultWidth2;
+	if (square1 > square2) {
+		resultHeight = resultHeight1;
+		resultWidth = resultWidth1;
+	}
+	else {
+		resultHeight = resultHeight2;
+		resultWidth = resultWidth2;
+	}
+	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
+}
