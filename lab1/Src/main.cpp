@@ -78,6 +78,7 @@ int main() {
 			break;
 		}
 		case 12: {
+			if (!rect1.checkIfRectangleExists()) break;
 			rect1.sumRectanglesWithAssignment();
 			break;
 		}
