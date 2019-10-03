@@ -11,8 +11,8 @@ int main() {
 
 	while (true) {
 		cout << "Choose:\n1) Create a rectangle;\n2) Show rectangle data;\n3) Change rectangle's square size by multiplying\n";
-		cout << "4) Increase X on 1\n5) Decrease X on 1\n6) Increase Y on 1\n\n7) Decrease Y on 1";
-		cout << "8) Move rectangle (new int x1, int y1)";
+		cout << "4) Increase X on 1\n5) Decrease X on 1\n6) Increase Y on 1\n7) Decrease Y on 1\n";
+		cout << "8) Move rectangle (new int x1, int y1)\n9) Cross Rectangles";
 		cout << "\n0) Exit\n"; cin >> menu;
 		system("cls");
 		switch (menu) {
@@ -63,11 +63,12 @@ int main() {
 			break;
 		}
 		case 9: {
+			rect1.crossRectangles();
 			break;
 		}
 		};
-		}
-		_getch();
-		return 0;
 	}
+
+	_getch();
+	return 0;
 }

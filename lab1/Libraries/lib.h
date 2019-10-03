@@ -14,6 +14,7 @@ public:
 	int x3, y3;
 	int x4, y4;
 	int width = 0, height = 0;
+	int width1, height1, width2, height2;
 
 	Rectangle();
 	void setCoordinates();
@@ -31,5 +32,6 @@ public:
 	void displacement();
 	bool checkIfRectangleExists();
 private:
+	void enterTwoRectangles();
 	void calcCoordinates();
 };

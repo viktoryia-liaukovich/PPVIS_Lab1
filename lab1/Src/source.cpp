@@ -83,3 +83,30 @@ bool Rectangle::checkIfRectangleExists() {
 	}
 	return true;
 }
+
+void Rectangle::enterTwoRectangles() {
+	cout << "Enter dimensions of first rectangle (int width, int height): ";
+	cin >> width1 >> height1;
+	while (width1 < 1 || height1 < 1) {
+		cout << "Enter valid positive dimensions value: ";
+		cin >> width1 >> height1;
+	}
+	cout << "Enter dimensions of second rectangle (int width, int height): ";
+	cin >> width2 >> height2;
+	while (width1 < 1 || height2 < 1) {
+		cout << "Enter valid positive dimensions value: ";
+		cin >> width2 >> height2;
+	}
+}
+
+void Rectangle::crossRectangles() {
+	int resultWidth, resultHeight;
+	enterTwoRectangles();
+	if (width1 < width2) {
+		resultWidth = width1;
+	} else resultWidth = width2;
+	if (height1 < height2) {
+		resultWidth = height1;
+	} else resultHeight = height2;
+	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
+}
