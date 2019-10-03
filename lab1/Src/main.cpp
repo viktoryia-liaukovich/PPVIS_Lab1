@@ -31,7 +31,7 @@ int main() {
 		}
 		case 3: {
 			if (!rect1.checkIfRectangleExists()) break;
-			cout << "Enter valid multiplier (int):";
+			cout << "Enter valid multiplier (int): ";
 			rect1.changeSize();
 			break;
 		}

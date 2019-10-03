@@ -36,8 +36,11 @@ void Rectangle::calcCoordinates() {
 
 void Rectangle::changeSize() {
 	int multiplier;
-	cout << "";
 	cin >> multiplier;
+	while (multiplier < 1) {
+		cout << "Enter valid positive multiplier value: ";
+		cin >> multiplier;
+	}
 	if (width > height) {
 		height *= multiplier;
 	}
