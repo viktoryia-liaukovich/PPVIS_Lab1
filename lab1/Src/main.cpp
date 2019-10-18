@@ -37,16 +37,28 @@ int main() {
 			break;
 		}
 		case 4: {
-			
+			if (!rect1.checkIfRectangleExists()) break;
+			rect1++;
+			rect1.getData();
+			break;
 		}
 		case 5: {
-			
+			if (!rect1.checkIfRectangleExists()) break;
+			rect1--;
+			rect1.getData();
+			break;
 		}
 		case 6: {
-			
+			if (!rect1.checkIfRectangleExists()) break;
+			++rect1;
+			rect1.getData();
+			break;
 		}
 		case 7: {
-			
+			if (!rect1.checkIfRectangleExists()) break;
+			--rect1;
+			rect1.getData();
+			break;
 		}
 		case 8: {
 			if (!rect1.checkIfRectangleExists()) break;

@@ -134,3 +134,33 @@ const Rectangle& Rectangle::operator-=(Rectangle a) {
 	*this = *this - a;
 	return *this;
 }
+
+Rectangle& Rectangle::operator++() {
+	width++;
+	height++;
+	calcCoordinates();
+	return *this;
+}
+
+Rectangle Rectangle::operator++(int) {
+	Rectangle oldRect = *this;
+	width++;
+	height++;
+	calcCoordinates();
+	return oldRect;
+}
+
+Rectangle& Rectangle::operator--() {
+	width--;
+	height--;
+	calcCoordinates();
+	return *this;
+}
+
+Rectangle Rectangle::operator--(int) {
+	Rectangle oldRect = *this;
+	width--;
+	height--;
+	calcCoordinates();
+	return oldRect;
+}
