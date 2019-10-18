@@ -89,6 +89,7 @@ int main() {
 			cout << "Set rectangle's dimensions (int width, int height):\n";
 			a.setDimensions();
 			rect1 -= a;
+			rect1.getData();
 			break;
 		}
 		case 11: {
@@ -114,6 +115,7 @@ int main() {
 			cout << "Set rectangle's dimensions (int width, int height):\n";
 			a.setDimensions();
 			rect1 += a;
+			rect1.getData();
 			break;
 		}
 		};
