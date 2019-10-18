@@ -63,7 +63,6 @@ int main() {
 		case 8: {
 			if (!rect1.checkIfRectangleExists()) break;
 			cout << "Input new coordinates\n";
-			rect1.setCoordinates();
 			rect1.displacement();
 			break;
 		}

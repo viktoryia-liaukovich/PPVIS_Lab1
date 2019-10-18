@@ -31,6 +31,4 @@ public:
 	void displacement();
 	bool checkIfRectangleExists();
 	void calcCoordinates();
-private:
-	void enterTwoRectangles();
 };
