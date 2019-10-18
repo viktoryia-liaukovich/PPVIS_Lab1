@@ -21,8 +21,8 @@ public:
 
 	friend Rectangle operator+(Rectangle, Rectangle);
 	friend Rectangle operator-(Rectangle, Rectangle);
-	const Rectangle& operator+=(Rectangle);
-	const Rectangle& operator-=(Rectangle);
+	Rectangle& operator+=(Rectangle);
+	Rectangle& operator-=(Rectangle);
 
 	Rectangle& operator++(); // ++x
 	Rectangle operator++(int); // x++

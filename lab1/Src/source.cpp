@@ -111,12 +111,12 @@ Rectangle operator-(Rectangle a, Rectangle b) {
 	return Rectangle(resX1, resY1, resWidth, resHeight);
 }
 
-const Rectangle& Rectangle::operator+=(Rectangle a) {
+ Rectangle& Rectangle::operator+=(Rectangle a) {
 	*this = *this + a;
 	return *this;
 }
 
-const Rectangle& Rectangle::operator-=(Rectangle a) {
+Rectangle& Rectangle::operator-=(Rectangle a) {
 	*this = *this - a;
 	return *this;
 }
