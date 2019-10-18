@@ -1,10 +1,19 @@
 #include <iostream>
 #include "../libraries/lib.h"
 #include <stdlib.h>
+#include <cmath>
 
 using namespace std;
 
 Rectangle::Rectangle() {
+}
+
+Rectangle::Rectangle(int x, int y, int w, int h) {
+	x1 = x;
+	y1 = y;
+	width = w;
+	height = h;
+	calcCoordinates();
 }
 
 void Rectangle::setCoordinates() {
@@ -51,33 +60,13 @@ void Rectangle::changeSize() {
 	calcCoordinates();
 };
 
-void Rectangle::increaseX() {
-	width++;
-	calcCoordinates();
-}
-
-void Rectangle::decreaseX() {
-	width--;
-	calcCoordinates();
-}
-
-void Rectangle::increaseY() {
-	height++;
-	calcCoordinates();
-}
-
-void Rectangle::decreaseY() {
-	height--;
-	calcCoordinates();
-}
-
 void Rectangle::displacement() {
 	calcCoordinates();
 }
 
 bool Rectangle::checkIfRectangleExists() {
-	if (width == 0) {
-		cout << "Create an instance of a rectangle first!\n\n";
+	if (width == 0 || height == 0) {
+		cout << "You've got NULL rectangle!\n\n";
 		return false;
 	}
 	if (width < 0 || x1 < 0 || y1 < 0 || height < 0) {
@@ -102,61 +91,46 @@ void Rectangle::enterTwoRectangles() {
 	}
 }
 
-void Rectangle::crossRectangles() {
-	int resultWidth, resultHeight;
-	enterTwoRectangles();
-	if (width1 < width2) {
-		resultWidth = width1;
-	} else resultWidth = width2;
-	if (height1 < height2) {
-		resultWidth = height1;
-	} else resultHeight = height2;
-	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
+Rectangle operator+(Rectangle a, Rectangle b) {
+	int resX1 = (a.x1 < b.x1) ? a.x1 : b.x1;
+	int resY1 = (a.y1 < b.y1) ? a.y1 : b.y1;
+	int resX4 = (a.x4 > b.x4) ? a.x4 : b.x4;
+	int resY4 = (a.y4 > b.y4) ? a.y4 : b.y4;
+	int resWidth = resX4 - resX1;
+	int resHeight = resY4 - resY1;
+
+	return Rectangle(resX1, resY1, resWidth, resHeight);
 }
 
-void Rectangle::crossRectanglesWithAssignment() {
-	int resultWidth, resultHeight;
-	cout<< "Enter dimensions of new rectangle (int width, int height): ";
-	cin>> width1 >> height1;
-	while (width1 < 1 || height1 < 1) {
-		cout<< "Enter valid positive dimensions value: ";
-		cin>> width1>> height1;
+Rectangle operator-(Rectangle a, Rectangle b) {
+	bool bNotInA = (b.x1 >= a.x4 || b.y1 >= a.y4 || b.x4 <= a.x1 || b.y4 <= a.y1);
+	bool aNotInB = (a.x1 >= b.x4 || a.y1 >= b.y4 || a.x4 <= b.x1 || a.y4 <= b.y1);
+
+	if (bNotInA && aNotInB) return Rectangle(0, 0, 0, 0);
+
+	Rectangle temp;
+	if (b.x1 < a.x1) {
+		temp = a;
+		a = b;
+		b = temp;
 	}
-	if (width1 < width) {
-		width = width1;
-	}
-	if (height1 < height) {
-		height = height1;
-	}
-	calcCoordinates();
+
+	int resX1 = b.x1;
+	int resY1 = (a.y1 < b.y1) ? b.y1 : a.y1;
+	int resX4 = (a.x4 < b.x4) ? a.x4 : b.x4;
+	int resY4 = (a.y4 < b.y4) ? a.y4 : b.y4;
+	int resWidth = resX4 - resX1;
+	int resHeight = resY4 - resY1;
+
+	return Rectangle(resX1, resY1, resWidth, resHeight);
 }
 
-void Rectangle::sumRectangles() {
-	enterTwoRectangles();
-	if (width1 > width2) {
-		resultWidth = width1;
-	}
-	else resultWidth = width2;
-	if (height1 > height2) {
-		resultHeight = height1;
-	}
-	else resultHeight = height2;
-	cout << "Result rectangle: " << resultWidth << " x " << resultHeight << " (width x height)\n\n";
-	calcCoordinates();
+const Rectangle& Rectangle::operator+=(Rectangle a) {
+	*this = *this + a;
+	return *this;
 }
 
-void Rectangle::sumRectanglesWithAssignment() {
-	cout << "Enter dimensions of new rectangle (int width, int height): ";
-	cin >> width1 >> height1;
-	while (width1 < 1 || height1 < 1) {
-		cout << "Enter valid positive dimensions value: ";
-		cin >> width1 >> height1;
-	}
-	if (width1 > width) {
-		width = width1;
-	}
-	if (height1 > height) {
-		height = height1;
-	}
-	calcCoordinates();
+const Rectangle& Rectangle::operator-=(Rectangle a) {
+	*this = *this - a;
+	return *this;
 }

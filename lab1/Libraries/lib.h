@@ -1,38 +1,36 @@
 #pragma once
 using namespace std;
 
-// functions
-
-void drawRectangle();
-
-// classes
 
 class Rectangle {
 public: 
-	int x1, y1;
-	int x2, y2;
-	int x3, y3;
-	int x4, y4;
+	int x1 = 0, y1 = 0;
+	int x2 = 0, y2 = 0;
+	int x3 = 0, y3 = 0;
+	int x4 = 0, y4 = 0;
 	int width = 0, height = 0;
 	int width1, height1, width2, height2;
 	int resultWidth, resultHeight;
 
 	Rectangle();
+	Rectangle(int x, int y, int w, int h);
 	void setCoordinates();
 	void setDimensions();
 	void getData();
 	void changeSize();
-	void increaseX();
-	void decreaseX();
-	void increaseY();
-	void decreaseY();
-	void sumRectangles();
-	void sumRectanglesWithAssignment();
-	void crossRectangles();
-	void crossRectanglesWithAssignment();
+
+	friend Rectangle operator+(Rectangle, Rectangle);
+	friend Rectangle operator-(Rectangle, Rectangle);
+	const Rectangle& operator+=(Rectangle);
+	const Rectangle& operator-=(Rectangle);
+
+	Rectangle& operator++(); // ++x
+	Rectangle operator++(int); // x++
+	Rectangle& operator--(); // --x
+	Rectangle operator--(int); // x--
 	void displacement();
 	bool checkIfRectangleExists();
+	void calcCoordinates();
 private:
 	void enterTwoRectangles();
-	void calcCoordinates();
 };
